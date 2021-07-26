@@ -48,7 +48,8 @@ function game() {
     for (let i = 0; i < 5; i++) {
 
         let playerSelection = prompt("What's your play?").toLowerCase();
-        let computerSelection = computerPlay().toLowerCase();
+        let computerRandom = computerPlay();
+        let computerSelection = computerRandom.toLowerCase();
         
         let roundWinner = playRound(playerSelection, computerSelection);
         if (roundWinner == "Computer") {
