@@ -7,7 +7,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    console.log("Computer's play is " + computerSelection + ". Your play is " + playerSelection)
+    console.log("Computer's play is " + computerSelection + ". Your play is " + playerSelection + ".");
     
     if (playerSelection == computerSelection) {
         console.log ("It's a tie");
@@ -48,7 +48,7 @@ function game() {
     for (let i = 0; i < 5; i++) {
 
         let playerSelection = prompt("What's your play?").toLowerCase();
-        let computerSelection = computerPlay().toLowerCase;
+        let computerSelection = computerPlay().toLowerCase();
         
         let roundWinner = playRound(playerSelection, computerSelection);
         if (roundWinner == "Computer") {
