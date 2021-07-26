@@ -1,4 +1,4 @@
-const plays = ['Rock', 'Paper', 'Scissors'];
+const plays = ['rock', 'paper', 'scissors'];
 
 function computerPlay() {
     return plays[Math.floor(Math.random() * plays.length)];
@@ -48,8 +48,7 @@ function game() {
     for (let i = 0; i < 5; i++) {
 
         let playerSelection = prompt("What's your play?").toLowerCase();
-        let computerRandom = computerPlay();
-        let computerSelection = computerRandom.toLowerCase();
+        let computerSelection = computerPlay();
         
         let roundWinner = playRound(playerSelection, computerSelection);
         if (roundWinner == "Computer") {
