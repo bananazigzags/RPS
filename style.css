@@ -1,0 +1,34 @@
+.center {
+    width: 400px;
+    left: 40%;
+    top: 30%;
+    position: absolute;
+}
+
+body {
+    background-color: grey;
+}
+
+button {
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+}
+
+.buttons {
+    left: 400px;
+    padding-right: 30px;
+}
+
+p {
+    margin-left: -60px;
+    width: 400px;
+    font-size: 30px;
+    color: rgb(12, 27, 27);
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.results {
+    font-size: 20px;
+    transition: all 2s ease;
+}
