@@ -1,19 +1,21 @@
 let playerScore = 0;
 let computerScore = 0;
+
 const results = document.querySelector('#results');
+
 const play = document.createElement("p");
 play.classList.add('results');
+
 const score = document.createElement("p");
 score.classList.add('results');
+
 const round = document.createElement("p");
 round.classList.add('results');
+
 const winner = document.createElement('p');
 round.classList.add('results');
 
-
-// plays round on button click
 const buttons = document.querySelectorAll('.button');
-
 buttons.forEach((button) => {
     button.addEventListener('click', playRound);
     });
@@ -22,7 +24,6 @@ function setPlayerSelection(e) {
         playerSelection = e.target.id;
 }
 
-// returns computer play
 const plays = ['rock', 'paper', 'scissors'];
 
 function computerPlay() {
@@ -30,11 +31,13 @@ function computerPlay() {
 }
 
 function playRound(e) {
+    
     winner.textContent = "";
     let playerSelection = e.target.id;
     let computerSelection = computerPlay();
 
-    play.textContent = ("Computer's play is " + computerSelection + ". Your play is " + playerSelection + ".");
+    play.textContent = ("Computer's play is " + computerSelection +
+                        ". Your play is " + playerSelection + ".");
     results.appendChild(play);
 
     if (playerSelection == computerSelection) {
@@ -64,6 +67,7 @@ function playRound(e) {
             playerScore += 1;
         }
     }
+    
     score.textContent = `Player score: ${playerScore}, Computer score: ${computerScore}`;
     results.appendChild(round);
     results.appendChild(score);
